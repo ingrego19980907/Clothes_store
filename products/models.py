@@ -1,6 +1,5 @@
 from django.db import models
-
-# Create your models here.
+from users.models import User
 
 
 class ProductCategory(models.Model):
@@ -27,3 +26,11 @@ class Product(models.Model):
         return f" {self.name} | {self.category.name}"
 
 
+class Busket(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=0)
+    created_timestamp = madels.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"Корзина для {self.user.usernsme} | Продукт {self.product.name}"

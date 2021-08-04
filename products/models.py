@@ -30,7 +30,7 @@ class Busket(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=0)
-    created_timestamp = madels.DateTimeField(auto_now_add=True)
+    created_timestamp = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f"Корзина для {self.user.usernsme} | Продукт {self.product.name}"
+        return f"Корзина для {self.user.username} | Продукт {self.product.name}"

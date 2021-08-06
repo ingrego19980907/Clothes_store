@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 from products.models import ProductCategory, Product, Basket
 
+
 def index(request):
     context = {
         "title": "Store",
@@ -18,13 +19,13 @@ def products(request):
         "products": Product.objects.all(),
 
     }
-    return render(request, 'products/products.html',context)
+    return render(request, 'products/products.html', context)
 
 
 def basket_add(request, product_id):
     current_page = request.META.get('HTTP_REFERER')
     product = Product.objects.get(id=product_id)
-    baskets = Basket.objects.filter(current_page)
+    baskets = Basket.objects.filter(user=request.user, product=product)
     
     if not baskets.exists():
         Basket.objects.create(user=request.user, product=product, quantity=1)

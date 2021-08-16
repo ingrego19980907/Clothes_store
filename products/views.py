@@ -52,6 +52,8 @@ def basket_delete(request, id):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
-def single_product(request):
+def single_product(request, product_id):
+    product = Product.objects.get(id=product_id)
+    context = {'product': product}
     
-    return render(request, 'products/shop-single-product.html')
+    return render(request, 'products/single_product.html', context)

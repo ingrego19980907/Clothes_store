@@ -2,6 +2,19 @@
 {% load staticfiles %}
 {% block css %}
     <link href="{% static 'css/products.css' %}" rel="stylesheet">
+	<style type="text/css">
+		.category-title h5 a{
+			color: #333;
+		}
+		.category-title h5 a:hover{
+			color: #1ABC9C;
+		}
+		.product-title h5,
+		.product-title p,
+		.product-title h3{
+			text-align: center;
+		}
+	</style>
 {% endblock %}
 {% block content %}
 <!-- Page Content -->
@@ -14,9 +27,13 @@
             <h1 class="my-4">Store</h1>
             <div class="list-group">
 				{% for category in categories %}
-					<a href="{% url 'products:category'  category.id %}"
-					   class="list-group-item">{{ category.name }}
-					</a>
+					<div class="category-title">
+						<h5>
+							<a href="{% url 'products:category'  category.id %}"
+							   class="list-group-item">{{ category.name }}
+							</a>
+						</h5>
+					</div>
 				{% endfor %}
             </div>
 
@@ -61,16 +78,19 @@
                                  src="/media/{{ product.image }}"
                                  alt="">
                         </a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="{% url 'products:single' product.id  %}">{{ product.name }}</a>
-                            </h4>
-                            <h5>{{ product.price }} грн.</h5>
+                        <div class="product-title">
+                            <h3>
+                                <a href="{% url 'products:single' product.id  %}">
+	                                {{ product.name }}
+                                </a>
+                            </h3>
+                            <h5 class="product-price"><del>{{ product.price }}</del> <ins>{{ product.price }}</ins>
+	                            грн.</h5>
                             <p class="card-text">{{ product.short_description }}</p>
                         </div>
                         <div class="card-footer text-center">
 	                        <a href="{% url 'products:basket_add' product.id %}">
-                                <button type="button" class="btn btn-outline-success">
+                                <button type="submit" class="add-to-cart button m-0">
 	                                Отправить в корзину
                                 </button>
 	                        </a>

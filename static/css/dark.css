@@ -678,6 +678,10 @@ body #side-panel.dark {
 	color: #F7F7F7;
 }
 
+.product-title{
+	text-align:  center;
+}
+
 .dark .product-title h3 a:hover,
 .dark .single-product .product-title h2 a:hover {
 	color: #1ABC9C;

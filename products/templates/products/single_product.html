@@ -1,18 +1,7 @@
 {% extends 'products/base.html' %}
 {% load staticfiles %}
 {% block css %}
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="SemiColonWeb" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %} " type="text/css" />
-	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
-	<link rel="stylesheet" href="{% static 'css/dark.css' %}" type="text/css" />
-	<link rel="stylesheet" href="{% static 'css/font-icons.css'%}" type="text/css" />
-	<link rel="stylesheet" href="{% static 'css/animate.css'%}" type="text/css" />
-	<link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}" type="text/css" />
 
-	<link rel="stylesheet" href="{% static 'css/custom.css' %}" type="text/css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Shop Single Sticky | Canvas</title>
 	<style>
 		@media (min-width: 992px) {
@@ -100,7 +89,9 @@
 {#											<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty" />#}
 {#											<input type="button" value="+" class="plus">#}
 {#										</div>#}
-										<button type="submit" class="add-to-cart button m-0">Add to cart</button>
+										<button type="submit" class="add-to-cart button m-0">
+	                                        Отправить в корзину
+                                        </button>
 									</form><!-- Product Single - Quantity & Cart Button End -->
 {##}
 {#									<div class="line"></div>#}
@@ -356,7 +347,6 @@
 						<h4>Related Products</h4>
 
 						<div class="owl-carousel product-carousel carousel-widget" data-margin="30" data-pagi="false" data-autoplay="5000" data-items-xs="1" data-items-md="2" data-items-lg="3" data-items-xl="4">
-
 							<div class="oc-item">
 								<div class="product">
 									<div class="product-image">
@@ -383,7 +373,6 @@
 									</div>
 								</div>
 							</div>
-
 {#							<div class="oc-item">#}
 {#								<div class="product">#}
 {#									<div class="product-image">#}
@@ -513,7 +502,7 @@
 
 	<!-- Footer Scripts
 	============================================= -->
-	<script src="{% static 'js/functions.js' %}"></script>
+{#	<script src="{% static 'js/functions.js' %}"></script>#}
 {% endblock %}
 {% block footer %}
 <footer class="py-5 bg-dark">

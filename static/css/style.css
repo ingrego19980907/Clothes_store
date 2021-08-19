@@ -8217,13 +8217,17 @@ body:not(.device-touch):not(.device-sm):not(.device-xs) .product-image > a {
 .product-title h3 {
 	margin: 0;
 	font-size: 1.25rem;
+	text-align: center;
 }
 
+.category-title h4 a,
 .product-title h3 a,
 .single-product .product-title h2 a { color: #333; }
 
 .product-title h3 a:hover,
 .single-product .product-title h2 a:hover { color: #1ABC9C; }
+
+
 
 .product-price {
 	font-size: 1.125rem;

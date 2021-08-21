@@ -346,33 +346,48 @@
 
 						<h4>Related Products</h4>
 
-						<div class="owl-carousel product-carousel carousel-widget" data-margin="30" data-pagi="false" data-autoplay="5000" data-items-xs="1" data-items-md="2" data-items-lg="3" data-items-xl="4">
-							<div class="oc-item">
-								<div class="product">
-									<div class="product-image">
-										<a href="#"><img src="/media/products_images/Brown-sports-oversized-top-ASOS-DESIGN.png" alt="Checked Short Dress"></a>
-										<a href="#"><img src="/media/products_images/Dark-blue-wide-leg-ASOs-DESIGN-trousers.png" alt="Checked Short Dress"></a>
-										<div class="bg-overlay">
-											<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-												<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-cart"></i></a>
-												<a href="{% static 'include/ajax/shop-item.html' %}" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+							<div class="owl-carousel product-carousel carousel-widget" data-margin="30" data-pagi="false" data-autoplay="5000" data-items-xs="1" data-items-md="2" data-items-lg="3" data-items-xl="4">
+								{% for rel_product in list_related_products %}
+								<div class="oc-item">
+									<div class="product">
+										<div class="product-image">
+											<a href="#"><img src="/media/{{ rel_product.image }}"></a>
+											<a href="#"><img src="/media/{{ rel_product.image }}" alt="Checked Short Dress"></a>
+											<div class="bg-overlay">
+												<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+													<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-cart"></i></a>
+													<a href="{% static 'include/ajax/shop-item.html' %}" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+												</div>
+												<div class="bg-overlay-bg bg-transparent"></div>
 											</div>
-											<div class="bg-overlay-bg bg-transparent"></div>
 										</div>
-									</div>
-									<div class="product-desc center">
-										<div class="product-title"><h3><a href="#">Checked Short Dress</a></h3></div>
-										<div class="product-price"><del>$24.99</del> <ins>$12.49</ins></div>
-										<div class="product-rating">
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star-half-full"></i>
+										<div class="product-desc center">
+											<div class="product-title">
+												<h3>
+													<a href="#">
+														{{ rel_product.name }}
+													</a>
+												</h3>
+											</div>
+											<div class="product-price">
+												<del>
+													{{ rel_product.price }}
+												</del>
+												<ins>
+													{{ rel_product.price }}
+												</ins>
+											</div>
+{#											<div class="product-rating">#}
+{#												<i class="icon-star3"></i>#}
+{#												<i class="icon-star3"></i>#}
+{#												<i class="icon-star3"></i>#}
+{#												<i class="icon-star3"></i>#}
+{#												<i class="icon-star-half-full"></i>#}
+{#											</div>#}
 										</div>
 									</div>
 								</div>
-							</div>
+							{% endfor %}
 {#							<div class="oc-item">#}
 {#								<div class="product">#}
 {#									<div class="product-image">#}

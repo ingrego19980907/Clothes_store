@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from products.models import ProductCategory, Product, Basket
 from django.core.paginator import Paginator
-
+from random import choice
 
 def index(request):
     context = {
@@ -54,6 +54,12 @@ def basket_delete(request, id):
 
 def single_product(request, product_id):
     product = Product.objects.get(id=product_id)
-    context = {'product': product}
+    related_products = Product.objects.all()
+    list_related_products = []
+    for _ in range(4):
+        list_related_products.append(choice(related_products))
+    context = {'product': product,
+               'list_related_products': list_related_products,
+               }
     
     return render(request, 'products/single_product.html', context)

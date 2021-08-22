@@ -8212,7 +8212,10 @@ body:not(.device-touch):not(.device-sm):not(.device-xs) .product-image > a {
 	padding: 15px 0;
 }
 
-.product-title { margin-bottom: 7px; }
+.product-title {
+	margin-bottom: 10px;
+	height: 177px;
+}
 
 .product-title h3 {
 	margin: 0;

@@ -6,17 +6,28 @@ from products.models import ProductCategory, Product, Basket
 from django.core.paginator import Paginator
 from random import choice
 
+
 def index(request):
+    baskets = Basket.objects.filter(user=request.user)
+    total_quantity = sum(basket.quantity for basket in baskets)
+    total_sum = sum(basket.sum() for basket in baskets)
     context = {
         "title": "Store",
+        'total_quantity': total_quantity,
+        'total_sum': total_sum,
     }
     return render(request, 'products/index.html', context)
 
 
 def products(request, category_id=None, page=1):
+    baskets = Basket.objects.filter(user=request.user)
+    total_quantity = sum(basket.quantity for basket in baskets)
+    total_sum = sum(basket.sum() for basket in baskets)
     context = {
         "title": "Store-Catalog",
         "categories": ProductCategory.objects.all(),
+        'total_quantity': total_quantity,
+        'total_sum': total_sum,
     }
     if category_id:
         products = Product.objects.filter(category_id=category_id)
@@ -53,6 +64,9 @@ def basket_delete(request, id):
 
 
 def single_product(request, product_id):
+    baskets = Basket.objects.filter(user=request.user)
+    total_quantity = sum(basket.quantity for basket in baskets)
+    total_sum = sum(basket.sum() for basket in baskets)
     product = Product.objects.get(id=product_id)
     related_products = Product.objects.all()
     list_related_products = []
@@ -60,6 +74,8 @@ def single_product(request, product_id):
         list_related_products.append(choice(related_products))
     context = {'product': product,
                'list_related_products': list_related_products,
+               'total_quantity': total_quantity,
+               'total_sum': total_sum,
                }
     
     return render(request, 'products/single_product.html', context)

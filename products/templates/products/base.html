@@ -51,7 +51,10 @@
 	            {% if user.is_authenticated %}
 		            <li class="nav-item">
 	                    <a class="nav-link" href="{% url 'users:profile' %}">{{ user.username }}
-	                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+	                        <i class="fa fa-shopping-cart"></i> | {{ total_quantity }} шт. | {{ total_sum }} грн.
+
+
+
 	                    </a>
                     </li>
 		            <li class="nav-item">

@@ -90,7 +90,7 @@
 {#											<input type="button" value="+" class="plus">#}
 {#										</div>#}
 										<button type="submit" class="add-to-cart button m-0">
-	                                        Отправить в корзину
+	                                        В корзину
                                         </button>
 									</form><!-- Product Single - Quantity & Cart Button End -->
 {##}
@@ -344,7 +344,7 @@
 
 					<div class="w-100">
 
-						<h4>Related Products</h4>
+						<h4>Рекомендации</h4>
 
 							<div class="owl-carousel product-carousel carousel-widget" data-margin="30" data-pagi="false" data-autoplay="5000" data-items-xs="1" data-items-md="2" data-items-lg="3" data-items-xl="4">
 								{% for rel_product in list_related_products %}
@@ -368,15 +368,17 @@
 														{{ rel_product.name }}
 													</a>
 												</h3>
+												<div class="product-price">
+													<del>
+														{{ rel_product.price }}
+													</del>
+													<ins>
+														{{ rel_product.price }}
+													</ins>
+													грн.
+												</div>
 											</div>
-											<div class="product-price">
-												<del>
-													{{ rel_product.price }}
-												</del>
-												<ins>
-													{{ rel_product.price }}
-												</ins>
-											</div>
+
 {#											<div class="product-rating">#}
 {#												<i class="icon-star3"></i>#}
 {#												<i class="icon-star3"></i>#}

@@ -17,6 +17,9 @@
 		.product-title h3{
 			text-align: center;
 		}
+		.add-to-cart {
+            width: 216px;
+        }
 	</style>
 {% endblock %}
 {% block content %}
@@ -95,7 +98,7 @@
 	                        <div class="card-footer text-center">
 		                        <a href="{% url 'products:basket_add' product.id %}">
 	                                <button type="submit" class="add-to-cart button m-0">
-		                                Отправить в корзину
+		                                В корзину
 	                                </button>
 		                        </a>
 	                        </div>

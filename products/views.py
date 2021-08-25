@@ -77,5 +77,11 @@ def single_product(request, product_id):
                'total_quantity': total_quantity,
                'total_sum': total_sum,
                }
-    
     return render(request, 'products/single_product.html', context)
+
+
+def related_products(request, product_id):
+    product = Product.objects.get(id=product_id)
+    context = {'rel_product': product}
+    return render(request, 'products/shop-item.html', context)
+    

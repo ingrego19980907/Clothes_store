@@ -21,6 +21,11 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     quantity = models.PositiveIntegerField(default=0)
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
+    size = models.PositiveIntegerField(default=0)
+    color = models.CharField(max_length=64)
+    width = models.PositiveIntegerField(default=27)
+    height = models.PositiveIntegerField(default=20)
+    factory = models.CharField(max_length=64)
 
     def __str__(self):
         return f" {self.name} | {self.category.name}"
@@ -36,4 +41,4 @@ class Basket(models.Model):
         return f"Корзина для {self.user.username} | Продукт {self.product.name}"
     
     def sum(self):
-        return  self.quantity * self.product.price
+        return self.quantity * self.product.price

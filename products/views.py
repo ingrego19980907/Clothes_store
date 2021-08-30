@@ -8,14 +8,24 @@ from random import choice
 
 
 def index(request):
-    baskets = Basket.objects.filter(user=request.user)
-    total_quantity = sum(basket.quantity for basket in baskets)
-    total_sum = sum(basket.sum() for basket in baskets)
-    context = {
-        "title": "Store",
-        'total_quantity': total_quantity,
-        'total_sum': total_sum,
-    }
+    if not request.user.is_anonymous:
+        baskets = Basket.objects.filter(user=request.user)
+        if len(baskets) > 1:
+            total_quantity = sum(basket.quantity for basket in baskets)
+            total_sum = sum(basket.sum() for basket in baskets)
+            context = {
+                "title": "Store",
+                'total_quantity': total_quantity,
+                'total_sum': total_sum,
+            }
+        else:
+            context = {
+                "title": "Store",
+            }
+    else:
+        context = {
+            "title": "Store",
+        }
     return render(request, 'products/index.html', context)
 
 

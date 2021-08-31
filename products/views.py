@@ -30,15 +30,28 @@ def index(request):
 
 
 def products(request, category_id=None, page=1):
-    baskets = Basket.objects.filter(user=request.user)
-    total_quantity = sum(basket.quantity for basket in baskets)
-    total_sum = sum(basket.sum() for basket in baskets)
-    context = {
-        "title": "Store-Catalog",
-        "categories": ProductCategory.objects.all(),
-        'total_quantity': total_quantity,
-        'total_sum': total_sum,
-    }
+    if not request.user.is_anonymous:
+        baskets = Basket.objects.filter(user=request.user)
+        if len(baskets) > 1:
+            total_quantity = sum(basket.quantity for basket in baskets)
+            total_sum = sum(basket.sum() for basket in baskets)
+            context = {
+                "title": "Store-Catalog",
+                "categories": ProductCategory.objects.all(),
+                'total_quantity': total_quantity,
+                'total_sum': total_sum,
+            }
+        else:
+            context = {
+                "title": "Store-Catalog",
+                "categories": ProductCategory.objects.all(),
+            }
+    else:
+        context = {
+            "title": "Store-Catalog",
+            "categories": ProductCategory.objects.all(),
+        }
+    
     if category_id:
         products = Product.objects.filter(category_id=category_id)
     else:
@@ -74,19 +87,30 @@ def basket_delete(request, id):
 
 
 def single_product(request, product_id):
-    baskets = Basket.objects.filter(user=request.user)
-    total_quantity = sum(basket.quantity for basket in baskets)
-    total_sum = sum(basket.sum() for basket in baskets)
     product = Product.objects.get(id=product_id)
     related_products = Product.objects.all()
     list_related_products = []
     for _ in range(4):
         list_related_products.append(choice(related_products))
-    context = {'product': product,
-               'list_related_products': list_related_products,
-               'total_quantity': total_quantity,
-               'total_sum': total_sum,
-               }
+    if not request.user.is_anonymous:
+        baskets = Basket.objects.filter(user=request.user)
+        if len(baskets) > 1:
+            total_quantity = sum(basket.quantity for basket in baskets)
+            total_sum = sum(basket.sum() for basket in baskets)
+            context = {'product': product,
+                       'list_related_products': list_related_products,
+                       'total_quantity': total_quantity,
+                       'total_sum': total_sum,
+                       }
+        else:
+            context = {'product': product,
+                       'list_related_products': list_related_products,
+            }
+    else:
+        context = {'product': product,
+                   'list_related_products': list_related_products,
+        }
+    
     return render(request, 'products/single_product.html', context)
 
 

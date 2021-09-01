@@ -87,9 +87,11 @@
 {#											<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty" />#}
 {#											<input type="button" value="+" class="plus">#}
 {#										</div>#}
-										<button type="submit" class="add-to-cart button m-0">
-	                                        В корзину
-                                        </button>
+										<a href="{% url 'products:basket_add' product.id %}">
+			                                <button type="submit" class="add-to-cart button m-0">
+				                                В корзину
+			                                </button>
+				                        </a>
 									</form><!-- Product Single - Quantity & Cart Button End -->
 {##}
 {#									<div class="line"></div>#}
@@ -98,9 +100,8 @@
 									============================================= -->
 									<p>{{ product.short_description }}</p>
 									<ul class="iconlist">
-										<li><i class="icon-caret-right"></i> Dynamic Color Options</li>
-										<li><i class="icon-caret-right"></i> Lots of Size Options</li>
-										<li><i class="icon-caret-right"></i> 30-Day Return Policy</li>
+										<li><i class="icon-caret-right"></i> Отличное качество</li>
+										<li><i class="icon-caret-right"></i> 30-дней гарантии</li>
 									</ul><!-- Product Single - Short Description End -->
 
 									<!-- Product Single - Meta
@@ -348,7 +349,8 @@
 											                 alt="{{ rel_product.name }}"></a>
 											<div class="bg-overlay">
 												<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-													<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-cart"></i></a>
+													<a href="{% url 'products:basket_add' rel_product.id %}"
+													   class="btn btn-dark mr-2"><i class="icon-shopping-cart"></i></a>
 													<a href="{% url 'products:related' rel_product.id %}" class="btn
 													btn-dark"
 													   data-lightbox="ajax"><i

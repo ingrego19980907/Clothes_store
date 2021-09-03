@@ -109,7 +109,7 @@
 									<div class="card product-meta">
 										<div class="card-body">
 {#											<span itemprop="productID" class="sku_wrapper">SKU: <span class="sku">8465415</span></span>#}
-											<span class="posted_in">Категория: <a href="#" rel="tag">
+											<span class="posted_in">Категория: <a href="{% url 'products:category'  product.category.id %}" rel="tag">
 												{{ product.category }}</a>.</span>
 {#											<span class="tagged_as">Tags: <a href="#" rel="tag">Pink</a>, <a href="#" rel="tag">Short</a>, <a href="#" rel="tag">Dress</a>, <a href="#" rel="tag">Printed</a>.</span>#}
 										</div>

@@ -8,50 +8,32 @@ from random import choice
 
 
 def index(request):
+    context = {
+        "title": "Store",
+    }
     if not request.user.is_anonymous:
         baskets = Basket.objects.filter(user=request.user)
         if len(baskets) > 1:
             total_quantity = sum(basket.quantity for basket in baskets)
             total_sum = sum(basket.sum() for basket in baskets)
-            context = {
-                "title": "Store",
-                'total_quantity': total_quantity,
-                'total_sum': total_sum,
-            }
-        else:
-            context = {
-                "title": "Store",
-            }
-    else:
-        context = {
-            "title": "Store",
-        }
+            context['total_quantity'] = total_quantity
+            context['total_sum'] = total_sum
     return render(request, 'products/index.html', context)
 
 
 def products(request, category_id=None, page=1):
+    context = {
+        "title": "Store-Catalog",
+        "categories": ProductCategory.objects.all(),
+    }
     if not request.user.is_anonymous:
         baskets = Basket.objects.filter(user=request.user)
         if len(baskets) > 1:
             total_quantity = sum(basket.quantity for basket in baskets)
             total_sum = sum(basket.sum() for basket in baskets)
-            context = {
-                "title": "Store-Catalog",
-                "categories": ProductCategory.objects.all(),
-                'total_quantity': total_quantity,
-                'total_sum': total_sum,
-            }
-        else:
-            context = {
-                "title": "Store-Catalog",
-                "categories": ProductCategory.objects.all(),
-            }
-    else:
-        context = {
-            "title": "Store-Catalog",
-            "categories": ProductCategory.objects.all(),
-        }
-    
+            context['total_quantity'] = total_quantity
+            context['total_sum'] = total_sum
+
     if category_id:
         products = Product.objects.filter(category_id=category_id)
     else:
@@ -59,7 +41,6 @@ def products(request, category_id=None, page=1):
     paginator = Paginator(products, 3)
     products_paginator = paginator.page(page)
     context.update({'products': products_paginator})
-    
     return render(request, 'products/products.html', context)
 
 
@@ -98,23 +79,14 @@ def single_product(request, product_id):
                 break
     if not request.user.is_anonymous:
         baskets = Basket.objects.filter(user=request.user)
+        context = {'product': product,
+                   'list_related_products': list_related_products,
+                   }
         if len(baskets) > 1:
             total_quantity = sum(basket.quantity for basket in baskets)
             total_sum = sum(basket.sum() for basket in baskets)
-            context = {'product': product,
-                       'list_related_products': list_related_products,
-                       'total_quantity': total_quantity,
-                       'total_sum': total_sum,
-                       }
-        else:
-            context = {'product': product,
-                       'list_related_products': list_related_products,
-            }
-    else:
-        context = {'product': product,
-                   'list_related_products': list_related_products,
-        }
-    
+            context['total_quantity'] = total_quantity
+            context['total_sum'] = total_sum
     return render(request, 'products/single_product.html', context)
 
 

@@ -90,8 +90,12 @@ def single_product(request, product_id):
     product = Product.objects.get(id=product_id)
     related_products = Product.objects.all()
     list_related_products = []
-    for _ in range(4):
-        list_related_products.append(choice(related_products))
+    for _ in range(6):
+        while True:
+            rel_prod = choice(related_products)
+            if rel_prod not in list_related_products:
+                list_related_products.append(rel_prod)
+                break
     if not request.user.is_anonymous:
         baskets = Basket.objects.filter(user=request.user)
         if len(baskets) > 1:

@@ -1,0 +1,32 @@
+{% extends 'products/base.html' %}
+{% load staticfiles %}
+{% block css %}
+
+{% endblock %}
+{% block content %}
+	<h1>Checkout</h1>
+    <div class="order-info">
+        <h3>Your order</h3>
+        <ul>
+            {% for basket in baskets %}
+                <li>
+                    {{ basket.quantity }}x {{ basket.product.name }}
+                    <span>{{ basket.sum}} грн.</span>
+                </li>
+            {% endfor %}
+        </ul>
+        <p>Total: {{ total_sum }} грн.</p>
+    </div>
+    <form action="." method="post" class="order-form">
+
+        <p><input type="submit" value="Place order"></p>
+        {% csrf_token %}
+    </form>
+{% endblock %}
+{% block footer %}
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Store 2021</p>
+    </div>
+</footer>
+{% endblock %}

@@ -65,3 +65,10 @@ class Cart(object):
         Подсчет всех товаров в корзине.
         """
         return sum(item['quantity'] for item in self.cart.values())
+
+    def get_total_price(self):
+        """
+        Подсчет стоимости товаров в корзине.
+        """
+        return sum(Decimal(item['price']) * item['quantity'] for item in
+                   self.cart.values())

@@ -77,11 +77,14 @@ def single_product(request, product_id):
             if rel_prod not in list_related_products:
                 list_related_products.append(rel_prod)
                 break
+    context = {
+        'title': product.name,
+        'product': product,
+        'list_related_products': list_related_products,
+    }
     if not request.user.is_anonymous:
         baskets = Basket.objects.filter(user=request.user)
-        context = {'product': product,
-                   'list_related_products': list_related_products,
-                   }
+        
         if len(baskets) >= 1:
             total_quantity = sum(basket.quantity for basket in baskets)
             total_sum = sum(basket.sum() for basket in baskets)

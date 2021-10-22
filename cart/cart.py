@@ -24,7 +24,7 @@ class Cart(object):
         self.save()
 
     def save(self):
-        # Обновление сессии cart
+        # refresh cart session
         self.session[settings.CART_SESSION_ID] = self.cart
         # Отметить сеанс как "измененный", чтобы убедиться, что он сохранен
         self.session.modified = True

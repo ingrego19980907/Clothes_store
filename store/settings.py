@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'store.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'clothes_store',
+        'NAME': 'clothes_store_master',
         'USER': 'admin',
         'PASSWORD': 'admin',
         'HOST': 'localhost',

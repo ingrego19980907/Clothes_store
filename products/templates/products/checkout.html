@@ -148,11 +148,11 @@
     <script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/856688074/?random=1635090342580&amp;cv=9&amp;fst=1635090342580&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=768&amp;u_w=1366&amp;u_ah=768&amp;u_aw=1366&amp;u_cd=24&amp;u_his=12&amp;u_tz=180&amp;u_java=false&amp;u_nplug=5&amp;u_nmime=2&amp;gtm=2wgak0&amp;sendb=1&amp;ig=1&amp;data=dynx_pagetype%3Dcheckout%3Becomm_pagetype%3Dcart%3Bevent%3Dpage_view%3Bgoogle_business_vertical%3Dretail%3Bdynx_itemid%3D6531367%3Becomm_prodid%3D6531367%3Bdynx_totalvalue%3D449%3Becomm_totalvalue%3D449&amp;frm=0&amp;url=https%3A%2F%2Fwww.foxtrot.com.ua%2Fru%2Fcart%2Fcheckout&amp;ref=https%3A%2F%2Fwww.foxtrot.com.ua%2Fru%2Fshop%2Fkovriki_dlya_myshki_lenovo_legion-gaming-xl-cloth.html&amp;tiba=%D0%9E%D1%84%D0%BE%D1%80%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script>
     <meta http-equiv="origin-trial"
           content="A4RpyXPHPXj2Tt0KMMrya+U6IibH8/6yFLknmyK5ZwpgUNYhhwGyllkLZNqKedteT7fKzxsI8p/Pbpbd4tEJOQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5uZXQ6NDQzIiwiZmVhdHVyZSI6IkludGVyZXN0Q29ob3J0QVBJIiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
-    <link rel="stylesheet" href="https://code-eu1.jivosite.com/css/d2730026/widget.css">
+    <link rel="stylesheet" href="{% static 'css/widget.css' %}">
 {% endblock %}
 {% block content %}
-    <body data-new-gr-c-s-check-loaded="14.1034.0" data-gr-ext-installed="" data-select2-id="18"
-          data-new-gr-c-s-loaded="14.1034.0">
+{#    <body data-new-gr-c-s-check-loaded="14.1034.0" data-gr-ext-installed="" data-select2-id="18"#}
+{#          data-new-gr-c-s-loaded="14.1034.0">#}
 
 
     <noscript>
@@ -174,12 +174,6 @@
         <main data-select2-id="118">
             <div class="container" data-select2-id="117">
                 <div class="wrapper" data-select2-id="116">
-                    {#				<div class="checkout__logo">#}
-                    {#					<a href="/">#}
-                    {#						<img src="/dist/images/logo-orange.svg" alt="foxtrot">#}
-                    {#					</a>#}
-                    {#				</div>#}
-
 
                     <input id="SelectedStoreCityId" name="SelectedStoreCityId" type="hidden" value="38055">
                     <input id="SelectedStoreStoreId" name="SelectedStoreStoreId" type="hidden" value="">
@@ -221,13 +215,6 @@
                                                     <div class="checkout-tovar-wrap">
                                                         <div class="checkout-tovar__img">
                                                             <div class="checkout-tovar__img_inner">
-                                                                <a href="javascript:void(0)"
-                                                                   class="checkout-tovar__remove"
-                                                                   data-url="/ru/cart/deletefromorder?orderItemId=2793884">
-                                                                    <i class="icon icon-close"></i>
-                                                                </a>
-
-
                                                                 <picture class="d-flex">
                                                                     <source type="image/webp" class="src-webp"
                                                                             srcset="https://files.foxtrot.com.ua/PhotoNew/img_0_834_557_0_Small.webp">
@@ -240,10 +227,7 @@
                                                                          title="Коврик LENOVO Legion Gaming XL Cloth (GXH0W29068)"
                                                                          alt="Коврик LENOVO Legion Gaming XL Cloth (GXH0W29068)"
                                                                          style="">
-
                                                                 </picture>
-
-
                                                             </div>
                                                         </div>
 
@@ -258,19 +242,11 @@
                                                              data-title="Коврик LENOVO Legion Gaming XL Cloth (GXH0W29068)">
 
                                                             <div class="checkout-tovar__title ">
-
-
                                                                 <a href="/ru/shop/kovriki_dlya_myshki_lenovo_legion-gaming-xl-cloth.html"
                                                                    class="product-title-link">
                                                                     Коврик LENOVO Legion Gaming XL Cloth
-                                                                    (GXH0W29068) </a>
-
-
-                                                                <div class="notify-red-light no-delivery-type"
-                                                                     style="display:none">
-                                                                    <span>Внимание! По данному товару нет способов доставки</span>
-                                                                    <i class="icon icon-info js-no-delivery-type-tooltip"></i>
-                                                                </div>
+                                                                    (GXH0W29068)
+                                                                </a>
                                                             </div>
 
                                                             <div class="checkout-tovar__bottom">
@@ -278,15 +254,10 @@
                                                                 <div class="checkout-tovar__count"
                                                                      style="visibility:visible">
                                                                     <p class="checkout-tovar__count_inner">
-                                                <span class="checkout-tovar__count_scale disabled" data-action="minus">
-                                                    <i class="ico-qty-minus"></i>
-                                                </span>
                                                                         <span class="checkout-tovar__count_number"
-                                                                              data-quantity="1">1</span>
-                                                                        <span class="checkout-tovar__count_scale"
-                                                                              data-action="plus">
-                                                    <i class="icon-close ico-qty-plus"></i>
-                                                </span>
+                                                                              data-quantity="1">1
+                                                                        </span>
+
                                                                     </p>
                                                                 </div>
                                                                 <div class="checkout-tovar__price">
@@ -298,748 +269,33 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="checkout-tovar__remove_mob">
-                                                        <div class="checkout-tovar__remove_mob_inner"
-                                                             data-url="/ru/cart/deletefromorder?orderItemId=2793884">
-                                                            <div>
-                                                                <i class="icon icon-trash"></i>
-                                                                <span>Удалить</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
-
-                                                </div>
-                                                <div class="checkout-tovar__warning info-long-delivery"
-                                                     style="display:none;" data-day1="день." data-day2="дня."
-                                                     data-day3="дней.">
-                                                    <p style="display: none;">Данный товар увеличивает время доставки на
-                                                        <b
-                                                                class="qty"></b> <b class="day"></b></p>
-                                                    <div class="icon icon-info js-seller-delivery-tooltip"
-                                                         data-toggle="tooltip"
-                                                         data-text="<div style=&quot;padding: 10px 0 10px 10px&quot;><p>Обратите внимание, данный товар увеличивает срок доставки вашего заказа.</p><p style=&quot;margin-top: 10px&quot;>Если вам необходимо получить другие товары из этого заказа раньше:</p><p style=&quot;margin-top: 10px; color: rgba(130, 93, 199, 1) !important&quot;>1. Удалите этот товар</p><p style=&quot;margin-top: 10px; color: rgba(130, 93, 199, 1) !important&quot;>2. Либо оформите его отдельным заказом</p></div>"
-                                                         style="display: none;"></div>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <a href="javascript:void(0)"
-                                           class="checkout-tovar__toggle-link button-link button-link_black js-toggle-checkout-tovar"
-                                           data-title="Развернуть">
-                                        <span class="checkout-tovar__toggle-link hide">
-                                            <label>Свернуть</label>
-                                            <i class="icon icon-chevron-up"></i>
-                                        </span>
+                                               class="checkout-tovar__toggle-link button-link button-link_black js-toggle-checkout-tovar"
+                                               data-title="Развернуть">
+                                            <span class="checkout-tovar__toggle-link hide">
+                                                <label>Свернуть</label>
+                                                <i class="icon icon-chevron-up"></i>
+                                            </span>
                                         </a>
-                                    </div>
-                                    <div class="checkout-payment__body delivery-table" id="delivery-types"
-                                         data-url="/ru/checkout/getdeliverytypes" data-preorder="" data-outletstoreid=""
-                                         data-outletstorageid="" data-promo="" data-useactionbonues="False"
-                                         data-spendbonuses="" data-applyemployeediscount="False"
-                                         data-iscredittype="false"
-                                         data-applycoupons="False" data-select2-id="delivery-types">
-
-
-                                        <div class="checkout-payment__body-title">
-                                            <p>Доставка</p>
-                                        </div>
-                                        <div class="checkout-payment__body-content" data-count="5"
-                                             data-select2-id="113">
-                                            <div class="delivery__city">
-                                                <div class="delivery__city-main">
-                                                    <p>Выберите город доставки:</p>
-
-                                                    <div class="delivery__city-main__region unselectable delivery-popover-table">
-                                                        <div class="js-toggle-tooltip tooltip-link nowrap">
-                                                            <p class="popover-selected-city" id="city-selector"
-                                                               data-outletstorageid="" data-city-id="38357131"
-                                                               data-city-title="Дубно, Дубенский р-н, Ровенская обл."
-                                                               value="38357131" data-value="Дубно" name="CityID">
-                                                                Дубно</p>
-                                                            <i class="icon icon-chevron-down"></i>
-                                                        </div>
-
-                                                        <div class="tooltip">
-
-
-                                                            <div class="tooltip__region" data-url="/ru/cart/loadcities">
-                                                                <div class="tooltip__region-head">
-                                                                    <input type="search"
-                                                                           placeholder="Введите название города">
-                                                                    <i class="icon icon-search"></i>
-                                                                </div>
-
-                                                                <div class="tooltip__region-list smooth-scroll"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <ul class="smooth-scroll">
-                                                    <li><a href="javascript:void(0)" data-id="38056"
-                                                           data-full-title="Днепр, Днепропетровская обл."
-                                                           class="city-million-delivery">Днепр</a></li>
-                                                    <li><a href="javascript:void(0)" data-id="38061"
-                                                           data-full-title="Запорожье, Запорожская обл."
-                                                           class="city-million-delivery">Запорожье</a></li>
-                                                    <li><a href="javascript:void(0)" data-id="38044"
-                                                           data-full-title="Киев, Киевская обл."
-                                                           class="city-million-delivery">Киев</a></li>
-                                                    <li><a href="javascript:void(0)" data-id="38032"
-                                                           data-full-title="Львов, Львовская обл."
-                                                           class="city-million-delivery">Львов</a></li>
-                                                    <li><a href="javascript:void(0)" data-id="38057"
-                                                           data-full-title="Харьков, Харьковская обл."
-                                                           class="city-million-delivery">Харьков</a></li>
-                                                    <li><a href="javascript:void(0)" data-id="38048"
-                                                           data-full-title="Одесса, Одесская обл."
-                                                           class="city-million-delivery">Одесса</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="delivery" data-select2-id="112">
-
-                                                <div class="delivery__radio" data-payment="all">
-                                                    <div class="delivery__radio-body">
-                                                        <div class="delivery__radio-1 form-radio">
-                                                            <input class="delivery-input pick-up" type="radio"
-                                                                   id="delivery_128_211" name="deliveryType" value="9"
-                                                                   data-shipmentid="211" checked=""
-                                                                   data-deliveryid="128"
-                                                                   data-hide-promocode="False"
-                                                                   data-hide-giftcard="False">
-                                                            <label for="delivery_128_211">
-                                                                <img src="https://i2.foxtrot.com.ua/staticContent/svg/Fox_dostavka.svg"
-                                                                     alt="foxtrot">
-
-                                                                Самовывоз из 1 магазина
-
-                                                            </label>
-                                                        </div>
-                                                        <div class="delivery__radio-2" data-hasdate="True"
-                                                             data-date="29/10/2021">
-                                                            <span class="pickup-date">29/10/2021</span>
-                                                        </div>
-                                                        <div class="delivery__radio-3">
-                                                            <p style="color:#27AE60">бесплатно</p>
-                                                        </div>
-                                                        <div class="delivery__radio-4">
-                                                            <div class="icon icon-info" data-toggle="tooltip"
-                                                                 data-title="При выборе этого варианта обратите внимание на месторасположение, транспортную развязку, дни/часы работы отделения"></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="delivery__radio-form delivery-form delivery-form_type-1"
-                                                         style="display: none;">
-                                                        <div class="delivery-form__row">
-                                                            <div id="storeIdDropdownParent"
-                                                                 class="delivery-form__office dropdown-grid">
-                                                                <select class="select2 js-select-offices pickup-selector select2-hidden-accessible"
-                                                                        id="storeId" required=""
-                                                                        data-placeholder="Укажите точку самовывоза"
-                                                                        data-noresult="По вашему запросу ничего не найдено. Уточните свой запрос"
-                                                                        data-select2-id="storeId" style="width: 100%;"
-                                                                        tabindex="-1" aria-hidden="true">
-
-
-                                                                    <option data-select2-id="107"></option>
-
-
-                                                                    <option value="1542383" data-pickupdate="29/10/2021"
-                                                                            data-address="ул. Свободы, 2"
-                                                                            data-shopid="7709"
-                                                                            data-cmsshopid="501" data-oldprice="0"
-                                                                            data-outletprice="0"
-                                                                            data-legalentityid="FTDRetail"
-                                                                            data-labeltext="29/10/2021"
-                                                                            data-priority="0">
-                                                                        ул. Свободы, 2, 09:00 - 19:00
-                                                                    </option>
-                                                                </select><span
-                                                                    class="select2 select2-container select2-container--default"
-                                                                    dir="ltr" data-select2-id="106"
-                                                                    style="width: 100%;"><span class="selection"><span
-                                                                    class="select2-selection select2-selection--single"
-                                                                    role="combobox" aria-haspopup="true"
-                                                                    aria-expanded="false" tabindex="0"
-                                                                    aria-disabled="false"
-                                                                    aria-labelledby="select2-storeId-container"><span
-                                                                    class="select2-selection__rendered"
-                                                                    id="select2-storeId-container" role="textbox"
-                                                                    aria-readonly="true"><span
-                                                                    class="select2-selection__placeholder">Укажите точку самовывоза</span></span><span
-                                                                    class="select2-selection__arrow"
-                                                                    role="presentation"><b
-                                                                    role="presentation"></b></span></span></span><span
-                                                                    class="dropdown-wrapper"
-                                                                    aria-hidden="true"></span></span>
-                                                            </div>
-
-                                                            <div class="delivery-form__maps">
-                                                                <a href="javascript:void(0)"
-                                                                   class="button-link button-link_black js-checkout-open-shop-map-popup">
-                                                                    <label>Посмотреть на карте</label>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="delivery__radio delivery-radio-block " data-payment="all"
-                                                     data-increaseddays="[]" data-blocked-products="[]">
-                                                    <div class="delivery__radio-body">
-                                                        <input type="hidden" class="delivery-dates-info"
-                                                               value="[{&quot;ProductId&quot;:6531367,&quot;Date&quot;:&quot;2021-10-30T00:00:00&quot;,&quot;DaysIncrease&quot;:0,&quot;StoreKontragentId&quot;:1157541,&quot;LegalEntityId&quot;:20987}]">
-                                                        <div class="delivery__radio-1 form-radio">
-                                                            <input class="delivery-input" type="radio"
-                                                                   id="delivery_129_211"
-                                                                   name="deliveryType" value="1" data-shipmentid="211"
-                                                                   data-deliveryid="129" data-hide-promocode="False">
-
-                                                            <label for="delivery_129_211">
-                                                                <img src="https://i2.foxtrot.com.ua/staticContent/svg/Fox_dostavka.svg">
-                                                                Доставка в квартиру, Фокстрот
-                                                            </label>
-                                                        </div>
-                                                        <div class="delivery__radio-2" data-hasdate="True"
-                                                             data-date="30/10/2021">
-                                                            <p>30/10/2021</p>
-                                                        </div>
-                                                        <div class="delivery__radio-3">
-                                                            <p class="cost " data-cost="99">99 ₴</p>
-                                                        </div>
-                                                        <div class="delivery__radio-4">
-                                                            <div class="icon icon-info" data-toggle="tooltip"
-                                                                 data-title="Курьерская (адресная, «двери-двери», в руки) – предполагает доставку курьером по указанному Вами адресу в согласованное с Вами время"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="delivery__radio-form delivery-form delivery-form_type-1"
-                                                         style="display: none;">
-
-
-                                                        <div class="delivery-form__col addr-block">
-                                                            <p>Адреса доставки</p>
-                                                            <div class="delivery-form__address">
-                                                                <div class="delivery-form__address-row delivery-form__address-row_first dropdown-grid">
-                                                                    <input class="street-id-container" type="hidden">
-                                                                    <select type="text"
-                                                                            class="street-selector select2-hidden-accessible"
-                                                                            data-url="/ru/cart/loadstreets"
-                                                                            data-placeholder="Выберите улицу"
-                                                                            autocomplete="off" required=""
-                                                                            data-val="true"
-                                                                            data-val-required="The Улица* field is required."
-                                                                            data-noresult="Улица не найдена. Проверьте написание или мы автоматически сохраним этот адрес"
-                                                                            data-select2-id="79" tabindex="-1"
-                                                                            aria-hidden="true"></select><span
-                                                                        class="select2 select2-container select2-container--default"
-                                                                        dir="ltr" data-select2-id="80"
-                                                                        style="width: 100%;"><span
-                                                                        class="selection"><span
-                                                                        class="select2-selection select2-selection--single"
-                                                                        role="combobox" aria-haspopup="true"
-                                                                        aria-expanded="false" tabindex="0"
-                                                                        aria-disabled="false"
-                                                                        aria-labelledby="select2-tnrb-container"><span
-                                                                        class="select2-selection__rendered"
-                                                                        id="select2-tnrb-container" role="textbox"
-                                                                        aria-readonly="true"><span
-                                                                        class="select2-selection__placeholder">Выберите улицу</span></span><span
-                                                                        class="select2-selection__arrow"
-                                                                        role="presentation"><b
-                                                                        role="presentation"></b></span></span></span><span
-                                                                        class="dropdown-wrapper"
-                                                                        aria-hidden="true"></span></span>
-                                                                </div>
-                                                                <div class="delivery-form__address-row">
-
-
-                                                                    <input class="" required="" data-valid="false"
-                                                                           data-val-required="Укажите номер дома"
-                                                                           data-input-regex-message=""
-                                                                           data-input-regex-pattern=""
-                                                                           data-blur-regex-message=""
-                                                                           data-blur-regex-pattern="" placeholder="Дом"
-                                                                           data-placeholder="Дом"
-                                                                           data-focus-placeholder=""
-                                                                           autocomplete="off" data-house="" type="text"
-                                                                           value="">
-
-
-                                                                </div>
-
-                                                                <div class="delivery-form__address-row">
-
-
-                                                                    <input class="" data-val-required=""
-                                                                           data-input-regex-message=""
-                                                                           data-input-regex-pattern=""
-                                                                           data-blur-regex-message=""
-                                                                           data-blur-regex-pattern=""
-                                                                           placeholder="Квартира"
-                                                                           data-placeholder="Квартира"
-                                                                           data-focus-placeholder="" data-flat=""
-                                                                           type="text" value="">
-
-                                                                    <span class="field-validation-valid"></span>
-
-                                                                </div>
-
-                                                                <div class="delivery-form__address-row">
-
-
-                                                                    <input class="" data-val-required=""
-                                                                           data-input-regex-message=""
-                                                                           data-input-regex-pattern=""
-                                                                           data-blur-regex-message=""
-                                                                           data-blur-regex-pattern="" placeholder="Этаж"
-                                                                           data-placeholder="Этаж"
-                                                                           data-focus-placeholder=""
-                                                                           data-floor="" maxlength="2" numbers-only="1"
-                                                                           type="text" value="">
-
-                                                                    <span class="field-validation-valid"></span>
-
-                                                                </div>
-
-                                                                <div class="delivery-form__address-row">
-                                                                    <div class="form-checkbox">
-                                                                        <input data-elevator="" type="checkbox"
-                                                                               id="delivery-fox-elevator">
-                                                                        <label for="delivery-fox-elevator">
-                                                                            Лифт
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="delivery-form__save-address">
-                                                                <div class="form-checkbox">
-                                                                    <input data-saveaddress="" type="checkbox"
-                                                                           id="delivery-fox-save-address">
-                                                                    <label for="delivery-fox-save-address">
-                                                                        Сохранить адрес
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="delivery-form__col dateTimeBlock">
-                                                            <p>Время доставки </p>
-                                                            <div class="delivery-form__period ">
-                                                                <div class="delivery-form__period-date ">
-                                                                    <p>Дата</p>
-                                                                    <div class="delivery-form__period-field date-picker-field">
-
-
-                                                                        <input data-validated="" class=""
-                                                                               data-val-required=""
-                                                                               data-input-regex-message=""
-                                                                               data-input-regex-pattern=""
-                                                                               data-blur-regex-message=""
-                                                                               data-blur-regex-pattern=""
-                                                                               id="DeliveryDate"
-                                                                               placeholder="дд/мм/рррр"
-                                                                               data-placeholder="дд/мм/рррр"
-                                                                               data-focus-placeholder=""
-                                                                               data-toggle="checkout-datepicker"
-                                                                               data-picker="date" readonly="readonly"
-                                                                               value="30/10/2021" data-val="10/30/2021"
-                                                                               data-dates="10/30/2021;10/31/2021;11/01/2021;11/02/2021;11/03/2021;11/04/2021;11/05/2021"
-                                                                               data-callback="setDeliveryTime"
-                                                                               type="text">
-
-                                                                        <span class="field-validation-valid"></span>
-
-                                                                        <div class="icon icon-calendar"></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="delivery-form__period-time ">
-                                                                    <p>Время </p>
-                                                                    <div>
-                                                                        <ul class="smooth-scroll delivery-date-block"
-                                                                            data-dtwid="30/10/2021">
-                                                                            <li value="1" data-windowcost=""
-                                                                                data-cost="99"
-                                                                                class="delivery-time active">09:00 -
-                                                                                21:00
-                                                                            </li>
-                                                                        </ul>
-                                                                        <ul class="smooth-scroll delivery-date-block hidden"
-                                                                            data-dtwid="31/10/2021">
-                                                                            <li value="1" data-windowcost=""
-                                                                                data-cost="99"
-                                                                                class="delivery-time active">09:00 -
-                                                                                21:00
-                                                                            </li>
-                                                                        </ul>
-                                                                        <ul class="smooth-scroll delivery-date-block hidden"
-                                                                            data-dtwid="01/11/2021">
-                                                                            <li value="1" data-windowcost=""
-                                                                                data-cost="99"
-                                                                                class="delivery-time active">09:00 -
-                                                                                21:00
-                                                                            </li>
-                                                                        </ul>
-                                                                        <ul class="smooth-scroll delivery-date-block hidden"
-                                                                            data-dtwid="02/11/2021">
-                                                                            <li value="1" data-windowcost=""
-                                                                                data-cost="99"
-                                                                                class="delivery-time active">09:00 -
-                                                                                21:00
-                                                                            </li>
-                                                                        </ul>
-                                                                        <ul class="smooth-scroll delivery-date-block hidden"
-                                                                            data-dtwid="03/11/2021">
-                                                                            <li value="1" data-windowcost=""
-                                                                                data-cost="99"
-                                                                                class="delivery-time active">09:00 -
-                                                                                21:00
-                                                                            </li>
-                                                                        </ul>
-                                                                        <ul class="smooth-scroll delivery-date-block hidden"
-                                                                            data-dtwid="04/11/2021">
-                                                                            <li value="1" data-windowcost=""
-                                                                                data-cost="99"
-                                                                                class="delivery-time active">09:00 -
-                                                                                21:00
-                                                                            </li>
-                                                                        </ul>
-                                                                        <ul class="smooth-scroll delivery-date-block hidden"
-                                                                            data-dtwid="05/11/2021">
-                                                                            <li value="1" data-windowcost=""
-                                                                                data-cost="99"
-                                                                                class="delivery-time active">09:00 -
-                                                                                21:00
-                                                                            </li>
-                                                                        </ul>
-                                                                        <label id="pick-time-informer hidden">
-                                                                            Выберите удобное для вас время доставки
-                                                                            курьером, и мы сможем обработать ваш заказ
-                                                                            быстрее
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="delivery__radio delivery-radio-block " data-payment="all"
-                                                     data-increaseddays="[]" data-blocked-products="[]">
-                                                    <div class="delivery__radio-body">
-                                                        <input type="hidden" class="delivery-dates-info"
-                                                               value="[{&quot;ProductId&quot;:6531367,&quot;Date&quot;:&quot;2021-10-27T00:00:00&quot;,&quot;DaysIncrease&quot;:0,&quot;StoreKontragentId&quot;:1241545,&quot;LegalEntityId&quot;:21065661}]">
-                                                        <div class="delivery__radio-1 form-radio">
-                                                            <input class="delivery-input" type="radio"
-                                                                   id="delivery_129_150"
-                                                                   name="deliveryType" value="2" data-shipmentid="150"
-                                                                   data-deliveryid="129" data-hide-promocode="False">
-
-                                                            <label for="delivery_129_150">
-                                                                <img src="https://i2.foxtrot.com.ua/staticContent/svg/NovayaPochta_dostavka.svg">
-                                                                Доставка в квартиру, Нова Пошта
-                                                            </label>
-                                                        </div>
-                                                        <div class="delivery__radio-2" data-hasdate="True"
-                                                             data-date="27/10/2021">
-                                                            <p>27/10/2021</p>
-                                                        </div>
-                                                        <div class="delivery__radio-3">
-                                                            <p class="cost" data-cost="99">99 ₴</p>
-                                                        </div>
-                                                        <div class="delivery__radio-4">
-                                                            <div class="icon icon-info" data-toggle="tooltip"
-                                                                 data-title="Курьерская (адресная, «двери-двери», в руки) – предполагает доставку курьером по указанному Вами адресу в согласованное с Вами время"></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="delivery__radio-form delivery-form delivery-form_type-1"
-                                                         style="display: none;">
-
-                                                        <div class="delivery-form__col addr-block">
-                                                            <p>Адреса доставки</p>
-                                                            <div class="delivery-form__address">
-                                                                <div class="delivery-form__address-row delivery-form__address-row_first dropdown-grid">
-                                                                    <input class="street-id-container" type="hidden">
-
-                                                                    <select type="text"
-                                                                            class="street-selector select2-hidden-accessible"
-                                                                            data-url="/ru/cart/loadstreets"
-                                                                            data-placeholder="Выберите улицу"
-                                                                            autocomplete="off" required=""
-                                                                            data-val="true"
-                                                                            data-val-required="The Улица* field is required."
-                                                                            data-noresult="Улица не найдена. Проверьте написание или мы автоматически сохраним этот адрес"
-                                                                            data-select2-id="81" tabindex="-1"
-                                                                            aria-hidden="true"></select><span
-                                                                        class="select2 select2-container select2-container--default"
-                                                                        dir="ltr" data-select2-id="82"
-                                                                        style="width: 100%;"><span
-                                                                        class="selection"><span
-                                                                        class="select2-selection select2-selection--single"
-                                                                        role="combobox" aria-haspopup="true"
-                                                                        aria-expanded="false" tabindex="0"
-                                                                        aria-disabled="false"
-                                                                        aria-labelledby="select2-5m45-container"><span
-                                                                        class="select2-selection__rendered"
-                                                                        id="select2-5m45-container" role="textbox"
-                                                                        aria-readonly="true"><span
-                                                                        class="select2-selection__placeholder">Выберите улицу</span></span><span
-                                                                        class="select2-selection__arrow"
-                                                                        role="presentation"><b
-                                                                        role="presentation"></b></span></span></span><span
-                                                                        class="dropdown-wrapper"
-                                                                        aria-hidden="true"></span></span>
-
-                                                                </div>
-
-                                                                <div class="delivery-form__address-row">
-
-
-                                                                    <input class="" required="" data-valid="false"
-                                                                           data-val-required="Укажите номер дома"
-                                                                           data-input-regex-message=""
-                                                                           data-input-regex-pattern=""
-                                                                           data-blur-regex-message=""
-                                                                           data-blur-regex-pattern="" placeholder="Дом"
-                                                                           data-placeholder="Дом"
-                                                                           data-focus-placeholder=""
-                                                                           autocomplete="off" data-house="" type="text"
-                                                                           value="">
-
-
-                                                                </div>
-
-                                                                <div class="delivery-form__address-row delivery-form__address-row-flat">
-
-
-                                                                    <input class="" data-val-required=""
-                                                                           data-input-regex-message=""
-                                                                           data-input-regex-pattern=""
-                                                                           data-blur-regex-message=""
-                                                                           data-blur-regex-pattern=""
-                                                                           placeholder="Квартира"
-                                                                           data-placeholder="Квартира"
-                                                                           data-focus-placeholder="" data-flat=""
-                                                                           numbers-only="" type="text" value="">
-
-                                                                    <span class="field-validation-valid"></span>
-
-                                                                </div>
-
-                                                                <div class="delivery-form__address-row">
-
-
-                                                                    <input class="" data-val-required=""
-                                                                           data-input-regex-message=""
-                                                                           data-input-regex-pattern=""
-                                                                           data-blur-regex-message=""
-                                                                           data-blur-regex-pattern="" placeholder="Этаж"
-                                                                           data-placeholder="Этаж"
-                                                                           data-focus-placeholder=""
-                                                                           data-floor="" maxlength="2" numbers-only=""
-                                                                           type="text" value="">
-
-                                                                    <span class="field-validation-valid"></span>
-
-                                                                </div>
-
-                                                                <div class="delivery-form__address-row">
-                                                                    <div class="form-checkbox">
-                                                                        <input data-elevator="" type="checkbox"
-                                                                               id="delivery-np-elevator_129_150"
-                                                                               checked="">
-                                                                        <label for="delivery-np-elevator_129_150">
-                                                                            Лифт
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="delivery-form__save-address">
-                                                                <div class="form-checkbox">
-                                                                    <input data-saveaddress="" type="checkbox"
-                                                                           id="delivery-np-save-address_129_150"
-                                                                           checked="">
-                                                                    <label for="delivery-np-save-address_129_150">
-                                                                        Сохранить адрес
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="delivery__radio " data-payment="all" data-increaseddays="[]"
-                                                     data-blocked-products="[]">
-                                                    <div class="delivery__radio-body">
-                                                        <input type="hidden" class="delivery-dates-info"
-                                                               value="[{&quot;ProductId&quot;:6531367,&quot;Date&quot;:&quot;2021-10-27T00:00:00&quot;,&quot;DaysIncrease&quot;:0,&quot;StoreKontragentId&quot;:1241545,&quot;LegalEntityId&quot;:21065661}]">
-                                                        <div class="delivery__radio-1 form-radio">
-                                                            <input class="delivery-input" type="radio"
-                                                                   id="delivery_565_150"
-                                                                   name="deliveryType" value="3" data-shipmentid="150"
-                                                                   data-deliveryid="565" data-hide-promocode="False">
-
-                                                            <label for="delivery_565_150">
-                                                                <img src="https://i2.foxtrot.com.ua/staticContent/svg/NovayaPochta_dostavka.svg"
-                                                                     width="16">
-                                                                Доставка в отделение, Нова Пошта
-                                                            </label>
-                                                        </div>
-                                                        <div class="delivery__radio-2" data-hasdate="True"
-                                                             data-date="27/10/2021">
-                                                            <p>27/10/2021</p>
-                                                        </div>
-                                                        <div class="delivery__radio-3">
-                                                            <p class="cost" data-cost="79">79 ₴</p>
-                                                        </div>
-                                                        <div class="delivery__radio-4">
-                                                            <div class="icon icon-info" data-toggle="tooltip"
-                                                                 data-title="При выборе этого варианта обратите внимание на месторасположение, транспортную развязку, дни/часы работы отделения"></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="delivery__radio-form delivery-form delivery-form_type-1"
-                                                         style="display: block;">
-                                                        <div class="delivery-form__row" data-select2-id="111">
-
-                                                            <div class="delivery-form__office dropdown-grid"
-                                                                 id="delivery-DeliveryToBranch"
-                                                                 data-select2-id="delivery-DeliveryToBranch">
-                                                                <select class="select2 js-select-offices delivery-address external-delivery select2-hidden-accessible"
-                                                                        id="delivery-selector-NovaPoshta" required=""
-                                                                        data-url="/ru/checkout/getdeliveryaddresses?type=NovaPoshta&amp;cityId=38357131"
-                                                                        data-type="DeliveryToBranch" data-height="8"
-                                                                        data-weight="0" placeholder="Укажите отделение"
-                                                                        data-placeholder="Укажите отделение"
-                                                                        data-noresult="По вашему запросу ничего не найдено. Уточните свой запрос"
-                                                                        data-select2-id="delivery-selector-NovaPoshta"
-                                                                        tabindex="-1" aria-hidden="true"
-                                                                        data-validated="">
-                                                                </select><span
-                                                                    class="select2 select2-container select2-container--default select2-container--below"
-                                                                    dir="ltr" data-select2-id="108"
-                                                                    style="width: 100%;"><span class="selection"><span
-                                                                    class="select2-selection select2-selection--single"
-                                                                    role="combobox" aria-haspopup="true"
-                                                                    aria-expanded="false" tabindex="0"
-                                                                    aria-disabled="false"
-                                                                    aria-labelledby="select2-delivery-selector-NovaPoshta-container"><span
-                                                                    class="select2-selection__rendered"
-                                                                    id="select2-delivery-selector-NovaPoshta-container"
-                                                                    role="textbox" aria-readonly="true"><span
-                                                                    class="select2-selection__placeholder">Укажите отделение</span></span><span
-                                                                    class="select2-selection__arrow"
-                                                                    role="presentation"><b
-                                                                    role="presentation"></b></span></span></span><span
-                                                                    class="dropdown-wrapper"
-                                                                    aria-hidden="true"></span></span>
-                                                            </div>
-
-                                                            <div class="delivery-form__maps">
-                                                                <a href="javascript:void(0);"
-                                                                   class="button-link button-link_black np-depts"
-                                                                   data-type="NovaPoshta"
-                                                                   data-url="/ru/checkout/getdeliveryaddressesmap">
-                                                                    <label>Посмотреть на карте</label>
-                                                                </a>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="delivery__radio " data-payment="all" data-increaseddays="[]"
-                                                     data-blocked-products="[]">
-                                                    <div class="delivery__radio-body">
-                                                        <input type="hidden" class="delivery-dates-info"
-                                                               value="[{&quot;ProductId&quot;:6531367,&quot;Date&quot;:&quot;2021-10-31T00:00:00&quot;,&quot;DaysIncrease&quot;:0,&quot;StoreKontragentId&quot;:1157541,&quot;LegalEntityId&quot;:20987}]">
-                                                        <div class="delivery__radio-1 form-radio">
-                                                            <input class="delivery-input" type="radio"
-                                                                   id="delivery_565_213"
-                                                                   name="deliveryType" value="4" data-shipmentid="213"
-                                                                   data-deliveryid="565" data-hide-promocode="False">
-
-                                                            <label for="delivery_565_213">
-                                                                <img src="https://i2.foxtrot.com.ua/staticContent/svg/UkrPochta_dostavka.svg"
-                                                                     width="16">
-                                                                Доставка в отделение, Укрпочта
-                                                            </label>
-                                                        </div>
-                                                        <div class="delivery__radio-2" data-hasdate="True"
-                                                             data-date="31/10/2021">
-                                                            <p>31/10/2021</p>
-                                                        </div>
-                                                        <div class="delivery__radio-3">
-                                                            <p class="cost" data-cost="50">50 ₴</p>
-                                                        </div>
-                                                        <div class="delivery__radio-4">
-                                                            <div class="icon icon-info" data-toggle="tooltip"
-                                                                 data-title="При выборе этого варианта обратите внимание на месторасположение, транспортную развязку, дни/часы работы отделения"></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="delivery__radio-form delivery-form delivery-form_type-1"
-                                                         style="display: none;">
-                                                        <div class="delivery-form__row">
-
-                                                            <div class="delivery-form__office dropdown-grid"
-                                                                 id="delivery-DeliveryToBranch">
-                                                                <select class="select2 js-select-offices delivery-address external-delivery select2-hidden-accessible"
-                                                                        id="delivery-selector-UkrPoshta" required=""
-                                                                        data-url="/ru/checkout/getdeliveryaddresses?type=UkrPoshta&amp;cityId=38357131"
-                                                                        data-type="DeliveryToBranch" data-height="8"
-                                                                        data-weight="0" placeholder="Укажите отделение"
-                                                                        data-placeholder="Укажите отделение"
-                                                                        data-noresult="По вашему запросу ничего не найдено. Уточните свой запрос"
-                                                                        data-select2-id="delivery-selector-UkrPoshta"
-                                                                        tabindex="-1" aria-hidden="true">
-                                                                </select><span
-                                                                    class="select2 select2-container select2-container--default"
-                                                                    dir="ltr" data-select2-id="109"
-                                                                    style="width: 100%;"><span class="selection"><span
-                                                                    class="select2-selection select2-selection--single"
-                                                                    role="combobox" aria-haspopup="true"
-                                                                    aria-expanded="false" tabindex="0"
-                                                                    aria-disabled="false"
-                                                                    aria-labelledby="select2-delivery-selector-UkrPoshta-container"><span
-                                                                    class="select2-selection__rendered"
-                                                                    id="select2-delivery-selector-UkrPoshta-container"
-                                                                    role="textbox" aria-readonly="true"><span
-                                                                    class="select2-selection__placeholder">Укажите отделение</span></span><span
-                                                                    class="select2-selection__arrow"
-                                                                    role="presentation"><b
-                                                                    role="presentation"></b></span></span></span><span
-                                                                    class="dropdown-wrapper"
-                                                                    aria-hidden="true"></span></span>
-                                                            </div>
-
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="no-delivery-type-tooltip" style="display:none">
-                                            <p>Данный товар не может быть доставлен в ваш город, выбранным вами способом
-                                                доставки.</p>
-                                            <p>Для того, чтоб завершить оформление заказа - удалите этот товар из
-                                                списка.</p>
-                                            <p>Связь с поддержкой: <b style="font-weight: 500">0 800 300-353</b></p>
-                                        </div>
-                                    </div>
-
-                                    <div class="checkout-tovar-title">
+                                        <div class="checkout-tovar-title">
                                             Доставка
-                                    </div>
-
-                                    <div class="checkout-payment__body-content" data-count="5" data-select2-id="113">
+                                        </div>
+                                        <div class="checkout-payment__body-content" data-count="5" data-select2-id="113">
                                         <div class="delivery__city">
                                             <div class="delivery__city-main">
                                                 <p>Выберите город доставки:</p>
                                                 <input class="" required="" data-valid="false"
-                                                       data-val-required="Укажите номер дома"
+                                                       data-val-required="Укажите город"
                                                        data-input-regex-message=""
                                                        data-input-regex-pattern=""
                                                        data-blur-regex-message=""
-                                                       data-blur-regex-pattern="" placeholder="Дом"
-                                                       data-placeholder="Дом" data-focus-placeholder=""
+                                                       data-blur-regex-pattern="" placeholder="Город"
+                                                       data-placeholder="Город" data-focus-placeholder=""
                                                        autocomplete="off" data-house="" type="text"
                                                        value="">
                                             </div>
@@ -1260,7 +516,7 @@
                                                                    placeholder="Номер отделения"
                                                                    data-placeholder="Номер отделения"
                                                                    data-focus-placeholder="" data-flat=""
-                                                                   numbers-only="" type="text" value="">
+                                                                   numbers-only="true" type="text" value="">
                                                         </div>
 
                                                         <div class="delivery-form__maps">
@@ -1327,7 +583,7 @@
                                                                    placeholder="Номер отделения"
                                                                    data-placeholder="Номер отделения"
                                                                    data-focus-placeholder="" data-flat=""
-                                                                   numbers-only="" type="text" value="">
+                                                                   numbers-only="true" type="text" value="">
                                                         </div>
                                                         <div class="delivery-form__maps">
                                                             <a href="https://offices.ukrposhta.ua/"
@@ -1343,6 +599,12 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    </div>
+
+
+
+
 
                                     <div class="checkout-payment__body">
                                         <div class="checkout-payment__body-title">
@@ -1520,25 +782,25 @@
                                                     </div>
                                                 </div>
 
-                                                <ul class="checkout-orders__list">
-                                                    <li>
-                                                        <b>Доставка:</b> <span class="delivery-summary">Доставка в отделение, Нова Пошта</span>
-                                                    </li>
-
-                                                    <li>
-                                                        <b>Оплата:</b> <span
-                                                            class="payment-summary">Оплата наличными</span>
-                                                    </li>
-                                                </ul>
-
-                                                <ul class="checkout-orders__list">
-                                                    <li class="formed-on ">
-                                                        <b>Оформлен на:</b> <span>Вячеслав Суходоев</span>
-                                                    </li>
-                                                    <li class="receiver hidden">
-                                                        <b>Получатель:</b> <span></span>
-                                                    </li>
-                                                </ul>
+{#                                                <ul class="checkout-orders__list">#}
+{#                                                    <li>#}
+{#                                                        <b>Доставка:</b> <span class="delivery-summary">Доставка в отделение, Нова Пошта</span>#}
+{#                                                    </li>#}
+{##}
+{#                                                    <li>#}
+{#                                                        <b>Оплата:</b> <span#}
+{#                                                            class="payment-summary">Оплата наличными</span>#}
+{#                                                    </li>#}
+{#                                                </ul>#}
+{##}
+{#                                                <ul class="checkout-orders__list">#}
+{#                                                    <li class="formed-on ">#}
+{#                                                        <b>Оформлен на:</b> <span>Вячеслав Суходоев</span>#}
+{#                                                    </li>#}
+{#                                                    <li class="receiver hidden">#}
+{#                                                        <b>Получатель:</b> <span></span>#}
+{#                                                    </li>#}
+{#                                                </ul>#}
 
                                             </div>
                                             <a href="javascript:void(0)"
@@ -1590,28 +852,6 @@
                                             </button>
                                         </div>
 
-                                        {#									<ul class="checkout-results__col promo-bon-block checkout-results__bonuses">#}
-
-
-                                        {#										<li class="promocode-item">#}
-                                        {#											<div class="checkout-results__bonuses-body">#}
-                                        {#												<a href="javascript:void(0)"#}
-                                        {#												   class="button-link js-show-checkout-bonuses-form"><label>Применить#}
-                                        {#												                                                            промокод</label></a>#}
-                                        {#											</div>#}
-                                        {##}
-                                        {#											<div class="checkout-results__bonuses-form hidden">#}
-                                        {##}
-                                        {#												<input type="text" placeholder="Промокод" data-promo="1"#}
-                                        {#												       id="promo-input">#}
-                                        {#												<div class="button button_violet js-checkout-bonuses-form-thanks"#}
-                                        {#												     id="apply-promocode">Использовать#}
-                                        {#												</div>#}
-                                        {#											</div>#}
-                                        {#										</li>#}
-
-                                        {#									</ul>#}
-
                                         <div class="checkout-results__col">
                                             <div class="form-checkbox auth-field">
                                                 <input type="checkbox" id="fox-club-agreement" checked="checked">
@@ -1622,17 +862,9 @@
                                                     <label>угоди користувача </label>
                                                 </a>
                                                 </label>
-                                                {#											<span class="field-validation-error for-agreement hidden">#}
-                                                {#                        <span id="fox-club-agreement-error">Необходимо подтверждение</span>#}
-                                                {#                    </span>#}
                                             </div>
                                         </div>
 
-
-                                        <div class="checkout-results__msg checkout-results__msg_yellow">
-                                            <label>Цена на товар изменилась!</label>
-                                            <p>Выбранный вами способ доставки ограничивает применение промокода</p>
-                                        </div>
 
                                     </div>
                                 </div>
@@ -1654,7 +886,7 @@
 
 
                     <div class="checkout__copyring">
-                        Все права защищены "Фокстрот" Copyright © 2021
+                        Все права защищены "-----" © 2021
                     </div>
                 </div>
             </div>

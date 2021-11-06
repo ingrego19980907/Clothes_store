@@ -3,8 +3,6 @@ from products.models import Product
 from phonenumber_field.modelfields import PhoneNumberField
 
 
-
-
 class Order(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
@@ -28,6 +26,7 @@ class Order(models.Model):
 
     def get_total_cost(self):
         return sum(item.get_cost() for item in self.items.all())
+#     def total count for index
 
 
 class OrderItem(models.Model):

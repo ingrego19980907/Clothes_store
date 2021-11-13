@@ -192,6 +192,7 @@
                                         <div class="checkout-tovar-title">
                                             Заказ №1
                                         </div>
+
                                         <div class="checkout-tovar-list hide-for-mobile slot" id="products-block"
                                              data-url="/ru/checkout/getorderedproducts"
                                              data-slot-container-class="checkout-tovar-body"
@@ -201,6 +202,7 @@
                                                  data-preorder="False">
                                                 <div class="checkout-tovar-wrap-inner ">
                                                     <div class="checkout-tovar-wrap">
+                                                        {% for basket in baskets %}
                                                         <div class="checkout-tovar__img">
                                                             <div class="checkout-tovar__img_inner">
                                                                 <picture class="d-flex">
@@ -211,9 +213,9 @@
                                                                     <img class="align-self-center "
                                                                          src="https://files.foxtrot.com.ua/PhotoNew/img_0_834_557_0_Small.jpg"
                                                                          loading="lazy"
-                                                                         data-title="Коврик LENOVO Legion Gaming XL Cloth (GXH0W29068)"
-                                                                         title="Коврик LENOVO Legion Gaming XL Cloth (GXH0W29068)"
-                                                                         alt="Коврик LENOVO Legion Gaming XL Cloth (GXH0W29068)"
+                                                                         data-title="{{ basket.product.name }}"
+                                                                         title="{{ basket.product.name }}"
+                                                                         alt="{{ basket.product.name }}"
                                                                          style="">
                                                                 </picture>
                                                             </div>
@@ -222,17 +224,16 @@
                                                              data-name="Коврик LENOVO Legion Gaming XL Cloth (GXH0W29068)"
                                                              data-code="6531367" data-id="557" data-classid="834"
                                                              data-brand="LENOVO" data-availability="InStock"
-                                                             data-category="Коврики для мыши" data-quantity="1"
+                                                             data-category="{{ basket.product.category }}" data-quantity="1"
                                                              data-free-quantity="21" data-price="449" data-oldprice=""
                                                              data-cashback="5" data-setid="0" data-is-gifts="0"
                                                              data-promocode=""
-                                                             data-title="Коврик LENOVO Legion Gaming XL Cloth (GXH0W29068)">
+                                                             data-title="{{ basket.product.name }}">
 
                                                             <div class="checkout-tovar__title ">
                                                                 <a href="/ru/shop/kovriki_dlya_myshki_lenovo_legion-gaming-xl-cloth.html"
                                                                    class="product-title-link">
-                                                                    Коврик LENOVO Legion Gaming XL Cloth
-                                                                    (GXH0W29068)
+                                                                    {{ basket.product.name }}
                                                                 </a>
                                                             </div>
                                                             <div class="checkout-tovar__bottom">
@@ -246,11 +247,12 @@
                                                                 </div>
                                                                 <div class="checkout-tovar__price">
                                                                     <div class="checkout-tovar__price-main">
-                                                                        449 ₴
+                                                                       {{ basket.product.price }}
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        {% endfor %}
                                                     </div>
                                                 </div>
                                             </div>
